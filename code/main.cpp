@@ -47,8 +47,14 @@ int main(int argc,
     vy = -vh / 2;
     std::cout << "\033[2J";
     render(vx, vy, vw, vh, sw, sh, hidetext);
-    renderoverlay(
-        {"move      [WASD]", "set pos   [F]", "zoom      [QE]", "set zoom  [R]", "get view  [G]", "set view  [T]"}, sw);
+    renderoverlay({"move      [WASD]",
+                   "set pos   [F]",
+                   "zoom      [QE]",
+                   "set zoom  [R]",
+                   "get view  [G]",
+                   "set view  [T]",
+                   "hide text [H]"},
+                  sw);
     while (true)
     {
         char ch = _getch();
